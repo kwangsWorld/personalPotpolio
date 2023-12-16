@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>표관련태그</title>
+</head>
+
+<body>
+  <h1>표관련태그</h1>
+
+  <!--  테이블 시험문제 나올듯!!! 비!!상!!! 초오!!! 비!!상!!  
+        표(테이블) : 웹 문서에서 자료를 정리할 때 자주 사용한다.
+                    행과 열로 이루어져 있고, 행과 열이 만나는 지점을 셀이라고 한다.
+        
+        표를 만드는 기본적인 태그는 <table>, <tr>, <td>, <th>가 있다.
+            <table></table> : 기본적인 표를 생성해 주는 태그이다. 표의 시작과 끝을 나타낸다.
+            <tr></tr> : 표의 행을 나타내는 태그이다.
+            <th></th> : 표의 제목 셀을 나타내는 태그이다. (가운데 정렬, 글자 굵게)
+            <td></td> : 표의 일반 셀을 나타내는 태그이다.
+
+        기본적인 구조
+        <table>
+            <tr>
+                <th>제목</th>
+                <th>제목</th>
+            </tr>
+            <tr>
+                <td>내용</td>
+                <td>내용</td>
+            </tr>
+            <tr>
+                <td>내용</td>
+                <td>내용</td>
+            </tr>
+        </table>
+     -->
+  <table border="1">
+    <tr>
+      <th>이름</th>
+      <th>금액</th>
+    </tr>
+    <tr>
+      <td>차승원</td>
+      <td>7000</td>
+    </tr>
+    <tr>
+      <td>유해진</td>
+      <td>5000</td>
+    </tr>
+  </table>
+</body>
+
+</html>
+
+<hr />
+<hr />
+<hr />
+
+<table border="1">
+  <!-- caption : 테이블의 제목이나 내용을 추가하는 태그이다.(기본위치는 테이블 위 정중앙에 위치한다) -->
+  <caption>
+    <mark>
+      <b><i>웹 브라우저의 종류</i></b>
+    </mark>
+  </caption>
+  <tr>
+    <!-- width, height 속성을 이용해서 가로, 세로 길이를 지정 가능 -->
+    <th width="120px" height="50px">브라우저명</th>
+    <th width="80px">제조자</th>
+    <th width="300px">홈페이지</th>
+  </tr>
+  <tr>
+    <td>엣지</td>
+    <td>MS</td>
+    <td>WWW.MICROSOFT.COM</td>
+  </tr>
+  <tr>
+    <td>웨일</td>
+    <td>NAVER</td>
+    <td>WWW.NAVER.COM</td>
+  </tr>
+  <tr>
+    <td>크롬</td>
+    <td>GOOGLE</td>
+    <td>WWW.CHROME.COM</td>
+  </tr>
+  <tr>
+    <td>파이어폭스</td>
+    <td>MOZILA</td>
+    <td>WWW.MOZILA.ORG</td>
+  </tr>
+</table>
+
+<!-- (테이블||이미지) (위 || 아래)에 설명 작성할 때 사용  -->
+<figure>
+  <figcaption>이 테이블은</figcaption>
+  <figcaption>엄청난</figcaption>
+  <figcaption>테이블이다</figcaption>
+</figure>
+
+<hr />
+<hr />
+<hr />
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>이름</th>
+      <th>나이</th>
+      <th>주소</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="3">심원용</td>
+      <td>20</td>
+      <td>우리집</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>서울특별시</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>경기도 안양시</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="2">zzz</td>
+      <td>3명</td>
+    </tr>
+  </tfoot>
+</table>
+
+<hr />
+<hr />
+<hr />
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>월</th>
+      <th>화</th>
+      <th>수</th>
+      <th>목</th>
+      <th>금</th>
+      <th>토</th>
+      <th>일</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="2">쌀밥</td>
+      <td colspan="3">잡곡밥</td>
+      <td>스파게티</td>
+      <td>짜장면</td>
+    </tr>
+    <tr>
+      <td>불고기</td>
+      <td>떡갈비</td>
+      <td>미니돈까스</td>
+      <td>오징어볶음</td>
+      <td>제육볶음</td>
+      <td rowspan="2">피클</td>
+      <td>단무지</td>
+    </tr>
+    <tr>
+      <td>배추김치</td>
+      <td>깍두기</td>
+      <td>미소된장국</td>
+      <td>동치미</td>
+      <td>고추절임</td>
+      <td>짬뽕국물</td>
+    </tr>
+  </tbody>
+</table>
