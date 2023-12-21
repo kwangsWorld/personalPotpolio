@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>폼태그</title>
+</head>
+
+<body>
+  <h1>폼태그</h1>
+
+  <pre>
+        form :데이터 제출할 때 사용
+        form 태그의 action 속성 : 데이터를 전달받은 서버측 URL
+        input : 사용자(일반유저)의 입력값을 받음
+        input 태그의 name 속성 : 입력값을 서버로 전달할 때, key값 역할을 함
+        submit : form 내의 input 태그들의 값을 제출
+    </pre>
+
+  <!-- 100% 시험문제일듯! 비상!!!!!!!!!!!! 초 비상!!! -->
+
+  <form action="데이터를제출할주소">
+    아이디 : <input type="text" name="memberId" />
+    <br />
+    패스워드 : <input type="password" name="memberPwd" />
+    <br />
+    <input type="submit" value="로그인ㅋㅋ" />
+  </form>
+
+  <hr />
+
+  <h3>fieldset, legend(잘안쓰임)</h3>
+
+  <pre>
+        fieldset: 폼 요소를 그룹으로 묶어줌
+        legend : 묶은 폼 요소에 이름 붙여줌
+    </pre>
+
+  <form>
+    <fieldset>
+      <legend>회원정보</legend>
+      아이디 : <input type="text" name="memberId" />
+      <br />
+      패스워드 : <input type="password" name="memberPwd" />
+    </fieldset>
+
+    <fieldset>
+      <legend>배송정보</legend>
+      수령인 : <input type="text" name="recvName" />
+      <br />
+      주소 : <input type="text" name="addr" />
+    </fieldset>
+
+    <input type="submit" value="제출ㅋㅋ" />
+
+    <hr />
+    <hr />
+    <hr />
+
+    <h3>텍스트 관련</h3>
+
+    <input type="text" placeholder="아이디를 입력하세요" value="hello" name="memberId" size="30" maxlength="5" required />
+
+    <br />
+    <input type="password" placeholder="비밀번호를 입력하세요" />
+
+    <input type="search" />
+    <br />
+    <input type="url" />
+    <br />
+    <input type="email" />
+    <br />
+    <input type="tel" />
+    <br />
+
+    <input type="submit" value="제출ㅋㅋ" />
+    <input type="reset" value="리셋ㅎㅎ" />
+  </form>
+
+  <br /><br /><br />
+  <hr />
+  <br /><br /><br />
+
+  <h3>숫자 관련</h3>
+
+  <form>
+    <input type="number" min="0" max="15" step="3" />
+    <br />
+    <input type="range" min="0" max="100" step="20" value="30" />
+    <br />
+    <input type="submit" value="제출!!!!" />
+  </form>
+</body>
+
+</html>
+
+<br /><br /><br />
+<hr />
+<br /><br /><br />
+
+<h3>날짜/시간 관련</h3>
+
+<input type="date" value="2024-02-01" />
+<br />
+<input type="time" />
+<br />
+<input type="datetime-local" />
+
+<br /><br /><br />
+<hr />
+<br /><br /><br />
+
+<h3>라디오 버튼, 체크박스</h3>
+
+<pre>
+    라디오 : 여러개중 하나
+    체크박스 : 다중 선택
+</pre>
+
+<!-- 네임값이 다르면 체크가 하나만 됨, 다르면 둘다 선택됨 -->
+<form action="helloworld">
+  남자<input type="radio" value="m" name="gender" /> 여자<input type="radio" value="w" name="gender" />
+  <br />
+
+  코딩<input type="checkbox" name="hobby" value="coding" /> 개발<input type="checkbox" name="hobby" value="dev" />
+  프로그래밍<input type="checkbox" name="hobby" value="programing" />
+
+  <input type="submit" value="제출ㅋㅋ" />
+</form>
+
+<br />
+<hr />
+
+<h3>기타</h3>
+
+<form action="helloworld">
+  <input type="color" />
+  <br />
+  <input type="file" />
+
+  <!-- 굳이 사용자에게 보여줄 필요가 없는 사항들  -->
+  <input type="hidden" />
+  <br />
+  <select name="national">
+    <option value="ko">한국</option>
+    <option value="ch">중국</option>
+    <option value="jp">일본</option>
+  </select>
+
+  <textarea name="content" placeholder="내용을 입력하세요" rows="30" cols="50">
+ change by 빈지노 
+ 엄마다! 엄마야! woof! woof! fuck the roof! </textarea>
+
+  <br />
+  <input type="submit" />
+</form>
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
