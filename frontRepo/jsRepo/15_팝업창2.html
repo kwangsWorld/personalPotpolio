@@ -1,0 +1,33 @@
+<!-- 자식으로 값을 보내는 html -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>부모창 -> 자식창 값 보내기</h1>
+
+    <input type="text" name="nick">
+    <button onclick="openPopup();">닉네임 중복 검사</button>
+
+    <script>
+        function openPopup() {
+            const childWindow = window.open('/15_팝업창2_자식.html');
+            const inputTag = document.querySelector('input[name=nick]');
+            //객체가 생성되기 전에 먼저 새 창이 떠버려서 전달이 안되었음
+            //1초간의 딜레이를 줬더니 오류가 없음
+            setTimeout(() => {
+                const childinputTag = childWindow.document.querySelector('input[name=nick]');
+                console.log(childWindow.document);
+                childinputTag.value = inputTag.value;
+            }, 1000)
+        }
+    </script>
+
+</body>
+
+</html>
