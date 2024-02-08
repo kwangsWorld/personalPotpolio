@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>오늘 할 일</h1>
+
+    <input id="target" type="text" placeholder="할일을 입력하세요">
+    <button onclick="addTodo();">등록</button>
+
+    <br><br><br>
+
+    <div id="result">
+
+    </div>
+
+    <script>
+
+        function getSeqNo() {
+            let no = localStorage.getItem("seqNo");
+            if (!no) {
+                no = 1;
+            }
+            no = parseInt(no);
+            localStorage.setItem("seqNo", no + 1);
+            return no;
+        }
+
+        function addTodo() {
+            const todoArr = getTodoArr();
+
+            // let todoListStr = localStorage.getItem("todoList");
+            // if (!todoListStr) {
+            //     todoListStr = '[]';
+            // }
+            // const todoArr = JSON.parse(todoListStr);
+            //localStorage에서 가져오면 제이슨 형태의 문자열이 오게되는데
+            //해당 문자열을 객체배열로 만든다음 todoArr에 담게됨
+
+            const target = document.querySelector("#target");
+            //인풋 태그 가져오기
+            const todoObj = {
+                no: getSeqNo(),
+                title: target.value,
+                done: false,
+            };
+            todoArr.push(todoObj);
+            localStorage.setItem("todoList", JSON.stringify(todoArr));
+            paintView();
+
+            // localStorage.setItem("1", target.value);
+            //로컬 스토리지에 벨류값 지정하기
+            // paintView();
+        }
+
+        function paintView() {
+            //기존 내용 지우기
+            const result = document.querySelector("#result");
+            result.innerHTML = "";
+
+            const todoArr = getTodoArr();
+
+            for (let i = 0; i < todoArr.length; ++i) {
+                const todoObj = todoArr[i];
+
+
+
+                const divTag = document.createElement("div");
+                const h3Tag = document.createElement("h3");
+                const btnTag = document.createElement("button");
+                const btnTag2 = document.createElement("button");
+                const hrTag = document.createElement("hr");
+
+                h3Tag.innerHTML = todoObj.title;
+                divTag.appendChild(h3Tag);
+                btnTag.innerHTML = "완료";
+                btnTag2.innerHTML = "삭제";
+                btnTag2.addEventListener('click', () => {
+                    removeTodo(todoObj.no)
+                });
+                divTag.appendChild(btnTag);
+                divTag.appendChild(btnTag2);
+                result.appendChild(divTag);
+                result.appendChild(hrTag);
+            }
+        }
+
+        function getTodoArr() {
+            //데이터(문자열) 읽어와서 객체배열로 만들기
+            let todoListStr = localStorage.getItem("todoList");
+            if (!todoListStr) {
+                todoListStr = "[]";
+            }
+            const todoArr = JSON.parse(todoListStr);
+            return todoArr;
+        }
+
+        function removeTodo(no) {
+            //객체 배열 가져오기
+            const todoArr = getTodoArr();
+            //특정 요소(객체) 삭제
+            for (let i = 0; i < todoArr.length; ++i) {
+                const todoObj = todoArr[i];
+                if (todoObj.no === no) {
+                    todoArr.splice(i, 1);
+                    break;
+                }
+            }
+
+            //로컬 스토리지 최신화
+            localStorage.setItem("todoList", JSON.stringify(todoArr));
+
+            //화면 다시 그리기
+            paintView();
+        }
+
+        //처음에 화면 그려주기
+        paintView();
+
+    </script>
+
+</body>
+
+</html>
