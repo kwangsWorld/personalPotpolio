@@ -1,0 +1,20 @@
+main {
+    display: grid;
+    grid-template-columns: 100px 400px;
+    grid-template-rows: 100px 50px 50px 500px 100px;
+    /* 원래 기본값은 stretch stretch이지만
+    가운데 배치하기위해 center center로 지정함 */
+    place-items: stretch stretch;
+    place-content: center center;
+}
+
+main>h1 {
+    grid-column: span 2;
+}
+
+main>input[type=submit] {
+    grid-column: span 2;
+    width: 200px;
+    height: 100px;
+    font-size: 24px;
+}
