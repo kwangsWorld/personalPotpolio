@@ -1,24 +1,29 @@
 package exercise;
 
-import java.util.Scanner;
-
 public class ex1 {
 
 	public static void main(String[] args) {
 		
-		String str = "aBcDeFg";
+		String a = "aBcDeFg";
 		
-		int cnt = str.length();
+		int cnt = a.length();
+		
+		char[] arr = new char[cnt];
+		
 		
 		for(int i = 0; i < cnt; i++) {
-			if(str.charAt(i)>= 65 && str.charAt(i) <= 90) {
-				System.out.println("k");
+		
+			arr[i] = a.charAt(i);
+			int num = arr[i];
+			if(num >= 65 && num <= 90) {
+				num += 32;
 			}
+			else {
+				num -= 32;
+			}
+			arr[i] = (char)num;
 		}
-		
-		
-		
-		
+		System.out.println(arr);
 	}
 
 }
