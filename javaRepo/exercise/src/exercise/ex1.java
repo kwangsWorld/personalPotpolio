@@ -10,7 +10,6 @@ public class ex1 {
 		
 		char[] arr = new char[cnt];
 		
-		
 		for(int i = 0; i < cnt; i++) {
 		
 			arr[i] = a.charAt(i);

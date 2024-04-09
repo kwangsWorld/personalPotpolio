@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;springPrj07encrypt/src/main/resources/mybatis/mapper/xxxx-mapper.xml&apos; to &apos;member-mapper.xml&apos;" description="Rename resource &apos;xxxx-mapper.xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/resources/mybatis/mapper/xxxx-mapper.xml" name="member-mapper.xml" stamp="1705279800936" updateReferences="true"/>
+</session>

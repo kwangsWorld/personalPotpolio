@@ -1,0 +1,32 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>채팅 ~~~</h1>
+	
+	<form action="">
+		<input type="text" name="msg">
+		<input type="submit" value="전송">
+	</form>
+	
+	<div id="msgArea"></div>
+	
+	<script>
+	
+		const ws = new WebSocket("ws://127.0.0.1:8888/app/chatserver");
+		
+		ws.onopen = () =>{console.log("open~~~!!!"); };
+		ws.onclose = () =>{console.log("close~~~!!!"); };
+		ws.onerror = () =>{console.log("error~~~!!!"); };
+		ws.onmessage = () =>{console.log("msg~~~!!!"); };
+		
+	</script>
+	
+</body>
+</html>

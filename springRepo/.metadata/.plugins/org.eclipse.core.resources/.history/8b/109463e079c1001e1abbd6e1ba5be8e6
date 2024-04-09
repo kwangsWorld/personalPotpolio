@@ -1,0 +1,35 @@
+package com.kh.app;
+
+import org.springframework.web.socket.CloseStatus;
+import org.springframework.web.socket.WebSocketMessage;
+import org.springframework.web.socket.WebSocketSession;
+import org.springframework.web.socket.handler.TextWebSocketHandler;
+
+//WebSocketHandler 인터페이스를 상속받아서 해도 되긴 함
+public class KhChatServer extends TextWebSocketHandler{
+
+	// 소켓 연결 되었을 때 동작할 내용
+	@Override
+	public void afterConnectionEstablished(WebSocketSession session) throws Exception {
+		System.out.println("연결됨~~~");
+		
+	}
+
+	// 메세지 받았을 때 동작할 내용
+	@Override
+	public void handleMessage(WebSocketSession session, WebSocketMessage<?> message) throws Exception {
+		System.out.println("메세지 받음 ~~~");
+		System.out.println(message.getPayload());
+	}
+	
+
+	// 소켓 연결 끊겼을 때 동작할 내용
+	@Override
+	public void afterConnectionClosed(WebSocketSession session, CloseStatus status) throws Exception {
+		System.out.println("연결 끊김~~~");
+		
+	}
+
+	
+
+}
