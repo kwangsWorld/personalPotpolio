@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.app&apos; to &apos;com.kh.app.home&apos;&#x0D;&#x0A;- Original project: &apos;webPrj17&apos;&#x0D;&#x0A;- Original element: &apos;webPrj17/src/main/java/com.app&apos;&#x0D;&#x0A;- Renamed element: &apos;webPrj17/src/main/java/com.kh.app.home&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.app&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src\/main\/java&lt;com.app" name="com.kh.app.home" qualified="false" references="true" stamp="1701152117231" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,7 @@
+127.0.0.1 - - [05/Dec/2023:19:36:44 +0900] "GET / HTTP/1.1" 404 807
+127.0.0.1 - - [05/Dec/2023:19:37:08 +0900] "GET /app99/home HTTP/1.1" 200 1914
+127.0.0.1 - - [05/Dec/2023:19:37:08 +0900] "GET /app99/resources/img/logo.png HTTP/1.1" 200 223889
+127.0.0.1 - - [05/Dec/2023:19:37:08 +0900] "GET /app99/resources/css/header.css HTTP/1.1" 200 990
+127.0.0.1 - - [05/Dec/2023:19:37:08 +0900] "GET /favicon.ico HTTP/1.1" 404 818
+127.0.0.1 - - [05/Dec/2023:19:37:11 +0900] "GET /app99/board/list?pno=1 HTTP/1.1" 200 7279
+127.0.0.1 - - [05/Dec/2023:19:37:11 +0900] "GET /app99/resources/css/board/list.css HTTP/1.1" 200 316

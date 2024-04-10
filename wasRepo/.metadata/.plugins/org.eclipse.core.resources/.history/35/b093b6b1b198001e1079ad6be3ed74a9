@@ -1,0 +1,32 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>홈페이지</h1>
+
+	<button onclick="sendData();">서버한테서 데이터 받아오기</button>
+
+	<script>
+		function loadData(){		//fetch함수 사용해서 ajax방식으로 요청보내고 응답받아오기, 비동기방식(화면이동없이 하는것)
+			fetch("/app21/board/list")
+			.then( (resp) => { return resp.json();})
+			.then( (data) => {console.log(data);} );
+		}
+		
+		function sendData(){
+	         fetch("/app21/test" , { 	//자바스크립트의 객체를 만들어서 보내는 것
+	            method : "get" ,		//정확히는 요청을 보내는 것이 아닌 이런 작업을 하는 Promise 객체를 만들어주는 것임
+	         })
+	         .then( resp => resp.json()  )	//프로미스객체가 성공했으면 이거 수행해
+	         .then( data => {console.log(data);} )
+	         .catch( (  )=>{ console.log("catch 블럭 ~~~ !"); } )	//프로미스 객체가 실패했으면 이거 실행해
+	         ;
+	      }
+		</script>
+</body>
+</html>
